@@ -19,6 +19,7 @@ jobs:
     - run: dotnet restore
     - run: dotnet build --no-restore --configuration Debug
     - run: dotnet test --no-build --configuration Debug
+    - run: ls -la src
     - name: Get Allure history
       uses: actions/checkout@v4
       if: always()
